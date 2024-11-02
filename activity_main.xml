@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Profile Section -->
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="90dp"
+            android:src="@drawable/fitness_app_icon" />
+
+        <!-- Progress Summary Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#ffffff"
+            android:elevation="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:paddingHorizontal="16dp">
+
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_profile" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/welcomeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome!"
+                    android:textColor="#333333"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/user_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome to the fitness app" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <!-- Button to Calculate BMI -->
+            <Button
+                android:id="@+id/calculateBmiButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#FF9800"
+                android:text="Calculate BMI"
+                android:textColor="#FFFFFF"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="20dp" />
+
+            <!-- Button to Start Exercising -->
+            <Button
+                android:id="@+id/startExerciseButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#4CAF50"
+                android:text="Start Exercise"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Button to Generate Diet -->
+            <Button
+                android:id="@+id/generateDietButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#2196F3"
+                android:text="Generate Diet"
+                android:textColor="#FFFFFF" />
+
+            <!-- Button to Calculate Steps -->
+            <Button
+                android:id="@+id/calculateStepsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#FF5722"
+                android:text="Calculate Steps"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/startWorkoutButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:backgroundTint="#FF5722"
+                android:text="Start Workout"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:drawableLeft="@drawable/ic_fitness_center"
+                android:drawablePadding="8dp"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="#ffffff"
+                android:elevation="4dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/graphPlaceholder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#666666"
+                    android:textSize="16sp"
+                    android:padding="16dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="#ffffff"
+            android:elevation="4dp"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:text="Transform Your Today, Shape Your Tomorrow!"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#666666"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" />
+
+                <TextView
+                    android:id="@+id/weightValue"
+                    android:text="-FitnessApp"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:textStyle="italic"
+                    android:layout_gravity="right"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_marginBottom="16dp">
+
+
+            <Button
+                android:id="@+id/achievementsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#3F51B5"
+                android:text="Achievements"
+                android:textColor="#FFFFFF"
+                android:onClick="openAchievementsNews" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/logout"
+            android:id="@+id/logout"
+            android:backgroundTint="@color/black"
+            android:layout_marginBottom="50dp"/>
+    </LinearLayout>
+</ScrollView>
